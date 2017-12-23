@@ -26,6 +26,16 @@ class App < Sinatra::Base
     number1 = params[:number1].to_i
     number2 = params[:number2].to_i
     solution = ""
+    case params[:operation]
+    when 'add'
+      solution = (number1 + number2).to_s
+    when 'subtract'
+      solution = (number1 - number2).to_s
+    when 'multiply'
+      solution = (number1 * number2).to_s
+    when 'divide'
+      solution = (number1 / number2).to_s
+    end
   end
 
 end
